@@ -1,6 +1,7 @@
-import { prompts } from "./prompts.js";
-import boxen from "boxen";
-import chalk from "chalk";
+import { prompts } from './prompts.js';
+import inquirer from 'inquirer';
+import boxen from 'boxen';
+import chalk from 'chalk';
 
 const { log } = console;
 
@@ -24,9 +25,28 @@ function greetUser(){
   derived.logCyanBox(`             Copyright ${year} by Bread Monster              `);
 }
 
+async function getUserResponses(query, responses) {
+  await inquirer.prompt(query).then((responseObject) => {
+    const queryName = query[0].name;
+    responses[queryName] = responseObject[queryName];
+  });
+  return responses;
+}
+
 async function main(){
   greetUser();
-
+  const queries = Object.values(prompts);
+  let userResponses = {
+    export: '',
+    browserType: '',
+    userEmail: '',
+    officeId: '',
+    timeOfOccurrence: '',
+  };
+  for (const query of queries) {
+    userResponses = await getUserResponses(query, userResponses);
+  }
+  console.log(userResponses);
 }
 
 await main();
