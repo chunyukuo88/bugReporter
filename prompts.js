@@ -1,38 +1,38 @@
 export const prompts = {
-  browserType: [
+  'Browser Type': [
     {
       type: 'list',
-      message: 'What browser was the person using?',
-      name: 'browserType',
+      message: 'What browser was the person using?:\n> ',
+      name: 'Browser Type',
       choices: ['Firefox', 'Chrome', 'Edge', 'Safari', 'Opera', 'Internet Explorer', 'Brave', 'DuckDuckGo', 'Awaiting their response on this.', 'Other'],
     },
   ],
-  userEmail: [
+  'User Email': [
     {
       type: 'input',
-      message: 'Please enter user email',
-      name: 'userEmail',
+      message: 'Please enter user email:\n> ',
+      name: 'User Email',
     },
   ],
-  officeId: [
+  'Office ID': [
     {
       type: 'input',
-      message: 'Please enter the user\'s office ID, preferably SalesForce ID',
-      name: 'officeId',
+      message: 'Please enter the user\'s office ID, preferably SalesForce ID:\n> ',
+      name: 'Office ID',
     },
   ],
-  timeOfOccurrence: [
+  'Time Of Occurrence': [
     {
       type: 'input',
-      message: 'Please enter approximately when the user encountered the issue',
-      name: 'timeOfOccurrence',
+      message: 'Please enter approximately when the user encountered the issue:\n> ',
+      name: 'Time Of Occurrence',
     },
   ],
-  description: [
+  Description: [
     {
       type: 'input',
-      message: 'Please describe the issue',
-      name: 'description',
+      message: 'Please describe the issue:\n> ',
+      name: 'Description',
     },
   ],
 };
