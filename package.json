@@ -1,4 +1,8 @@
 {
+  "pkg": {
+    "assets": ["node_modules/**/*", "src/*"]
+  },
+  "bin": "index.js",
   "name": "bugreporter",
   "version": "1.0.0",
   "description": "",

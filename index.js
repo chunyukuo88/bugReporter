@@ -1,4 +1,4 @@
-import { prompts } from './prompts.js';
+import { prompts } from './src/prompts.js';
 import inquirer from 'inquirer';
 import clipboard from 'clipboardy';
 import boxen from 'boxen';
