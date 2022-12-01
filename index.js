@@ -43,7 +43,7 @@ function createBufferContent(userResponses) {
 
 function copyBugReportToBuffer(bufferContent) {
   clipboard.writeSync(bufferContent);
-  derived.logGreenBox(`
+  derived.logYellow(`
   The following has been copied to your clipboard:  
   ${bufferContent}
 `);
