@@ -38,7 +38,7 @@ function createBufferContent(userResponses) {
   const responses = Object.values(userResponses);
   return `
   🚨🚨 Bug Report 🐛🐛
-  Browser Type: ${responses[0]}  \n  *User Email:* ${responses[1]}  \n  *Office ID:* ${responses[2]}  \n  *Time of Occurrence:* ${responses[3]}  \n  *Description:* ${responses[4]}  `;
+  *Browser Type:* ${responses[0]}  \n  *User Email:* ${responses[1]}  \n  *Office ID:* ${responses[2]}  \n  *Time of Occurrence:* ${responses[3]}  \n  *Description:* ${responses[4]}  `;
 }
 
 function copyBugReportToBuffer(bufferContent) {
